@@ -20,15 +20,43 @@ MAPENet/
 ├── utils.py                
 └── README.md       
 ```
+## Requirements
 
-## How to Run the Code
+- `torch`
+- `numpy`
+- `pandas`
+- `tqdm`
+- `matplotlib`
+
+To install the main requirements:
+
+```bash
+pip install -r requirements.txt
+```
+## Dataset
+- China: The original air quality data is accessible at [this link](https://ojs.aaai.org/index.php/AAAI/article/view/26676)
+  
+- USA: The air quality dataset can be downloaded at [EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html)
+
+- Global Meteorological Data: 
+  You can obtain regional meteorological inputs by cropping the data from this [global dataset](https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast).
+  Only **the observational components** are used in this work; forecast values provided in the dataset are ignored.
+
+- Samples with missing or invalid data are filtered using the precomputed index file:  
+  `data/dataset/saved/available_1_indices_.pt`.
+
+## Prepare data
 Use the script below to preprocess pollutant `.csv` files into model-ready tensors including GT pollutant tensor `P` and RBF-interpolated pollutant input `X`:
 
 ```bash
-python data/air_quality/get_X_and_P.py
+python data/air_quality/prepare_data.py
 ```
+Precomputed channel-wise normalization parameters are stored in  
+  `data/dataset/saved/normalization_params_.pt`.
 
-Then run the code below to train and evaluate
+## How to Run the Code
+Run the code below to train and evaluate
+
 ```bash
 python pipeline.py ODETAU cuda:0 --il 12 --ol 4
 ```
