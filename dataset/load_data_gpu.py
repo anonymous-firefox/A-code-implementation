@@ -279,7 +279,7 @@ if cfg.dataset=='USA':
 else:
     pt = dir_ + f'dataset/saved/available_1_indices_.pt'
 
-loaded_indices = torch.load(pt, weights_only=True)
+loaded_indices = torch.load(pt, weights_only=True) #load valid sample
 
 
 loaded_indices = find_available(loaded_indices, length=cfg.length)

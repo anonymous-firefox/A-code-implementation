@@ -1,0 +1,8 @@
+numpy
+pandas
+torch
+logging
+tqdm
+subprocess
+argparse
+matplotlib

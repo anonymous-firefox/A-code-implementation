@@ -6,9 +6,9 @@ from torch.nn import ModuleList
 from model.convlstm2 import ChannelAdjuster
 
 import torch
-import gc
-import inspect
-import sys
+# import gc
+# import inspect
+# import sys
 
 
 class DWConv(nn.Module):
