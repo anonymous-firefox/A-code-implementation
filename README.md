@@ -1,4 +1,4 @@
-# Fine-Grained Spatiotemporal \\Air Quality Forecasting \\Guided by Chemical Transport Modeling
+# Fine-Grained Spatiotemporal Air Quality Forecasting Guided by Chemical Transport Modeling
 
 <p align="center">
   <img src="figure/model.png" alt="MAPENet Architecture" width="700"/>
