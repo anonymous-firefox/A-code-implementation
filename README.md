@@ -1,10 +1,3 @@
-# Fine-Grained Spatiotemporal Air Quality Forecasting Guided by Chemical Transport Modeling
-
-<p align="center">
-  <img src="figure/model.png" alt="MAPENet Architecture" width="700"/>
-</p>
-
-This porject contains the implementation of MAPENet in PyTorch.
 
 ## Directory Structure
 ```text
