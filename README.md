@@ -1,7 +1,7 @@
 
 ## Directory Structure
 ```text
-MAPENet/       
+/       
 ├── data                    # Original data
 ├── dataset
 ├── logs
